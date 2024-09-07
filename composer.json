@@ -1,8 +1,8 @@
 {
-    "name": "larajs/base",
+    "name": "larajs/boilerplate",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": ["laravel", "framework", "boilerplate", "laravel vue", "laravel vite"],
     "license": "MIT",
     "require": {
         "php": "^8.3",
@@ -10,12 +10,15 @@
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
+        "barryvdh/laravel-debugbar": "^3.13",
+        "barryvdh/laravel-ide-helper": "^3.1",
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^2.0",
         "laravel/pint": "^1.13",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "pestphp/pest": "^2.35"
+        "pestphp/pest": "^2.35",
+        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {
@@ -35,7 +38,9 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -61,11 +66,5 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./packages/*"
-        }
-    ]
+    "prefer-stable": true
 }

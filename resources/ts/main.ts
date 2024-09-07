@@ -3,6 +3,7 @@ import App from '@/views/App.vue';
 import router from '@/router';
 import '@/assets/sass/app.scss';
 import 'virtual:svg-icons-register';
+import '@/router/middleware';
 
 const pinia = createPinia();
 const app = createApp(App);

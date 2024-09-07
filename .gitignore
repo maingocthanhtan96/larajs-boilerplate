@@ -18,6 +18,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
 
 # Auto import
 auto-imports.d.ts
