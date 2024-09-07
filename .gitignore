@@ -18,6 +18,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+dist
 .phpstorm.meta.php
 _ide_helper.php
 _ide_helper_models.php

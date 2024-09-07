@@ -1,2 +1,4 @@
-const metaEnv = import.meta.env;
-export const env = (key: string, defaultValue?: unknown) => (has(metaEnv, key) ? metaEnv[key] : defaultValue);
+import has from 'lodash/has';
+
+export const env = (key: string, defaultValue?: unknown) =>
+  has(import.meta.env, key) ? import.meta.env[key] : defaultValue;

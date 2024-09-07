@@ -2,7 +2,7 @@
     "name": "larajs/boilerplate",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework", "boilerplate", "laravel vue", "laravel vite"],
+    "keywords": ["laravel", "framework", "boilerplate", "laravel vue", "laravel vite", "laravel boilerplate"],
     "license": "MIT",
     "require": {
         "php": "^8.3",

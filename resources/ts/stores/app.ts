@@ -6,7 +6,7 @@ export interface ResponseErrors {
 }
 
 export interface AppState {
-  errors: ResponseErrors;
+  errors: ResponseErrors['errors'];
 }
 
 export const useAppStore = defineStore('app', {
@@ -14,7 +14,7 @@ export const useAppStore = defineStore('app', {
     errors: {},
   }),
   actions: {
-    setErrors(errors: AppState['errors']) {
+    setErrors(errors: ResponseErrors['errors']) {
       this.errors = errors;
     },
   },

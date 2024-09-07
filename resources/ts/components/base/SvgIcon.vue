@@ -5,7 +5,7 @@ import type { CSSProperties } from 'vue';
 interface Props {
   name: string;
   color?: string;
-  size?: number | string;
+  fontSize?: number | string;
   width?: string;
   height?: string;
   class?: string;
@@ -13,7 +13,7 @@ interface Props {
 defineOptions({ inheritAttrs: false });
 const props = withDefaults(defineProps<Props>(), {
   color: '',
-  size: '',
+  fontSize: '',
   width: '1em',
   height: '1em',
   class: '',
@@ -27,7 +27,7 @@ const svgClass = computed(() => `${props.class} svg-icon`);
 const hasExternal = computed(() => isExternal(props.name));
 const svgStyle = computed<CSSProperties>(() => ({
   color: props.color ?? undefined,
-  fontSize: props.size ? `${props.size}px` : undefined,
+  fontSize: props.fontSize ? `${props.fontSize}px` : undefined,
 }));
 </script>
 

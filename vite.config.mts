@@ -8,6 +8,8 @@ import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
   plugins: [
+    // If you want to run directly from the Laravel server, you can use the laravel-vite-plugin
+    // If you want to run the Vite server separately, you can comment out the laravel-vite-plugin and remove index.html from the root folder.
     laravel({
       input: ['resources/ts/main.ts'],
     }),
@@ -32,7 +34,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./resources/ts', import.meta.url)),
+      '@': fileURLToPath(new URL('resources/ts', import.meta.url)),
     },
   },
 });
