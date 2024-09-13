@@ -1,5 +1,5 @@
 <?php
 
-test('globals')
-    ->expect(['dd', 'ddd', 'dump', 'ray', 'die', 'var_dump', 'exit', 'phpinfo', 'print_r', 'var_export'])
-    ->not->toBeUsed();
+arch()->preset()->php();
+arch()->preset()->laravel();
+arch()->preset()->security();
