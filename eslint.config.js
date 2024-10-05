@@ -21,6 +21,11 @@ export default [
   pluginSecurity.configs.recommended,
   eslintPluginUnicorn.configs['flat/recommended'],
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 0,
+    },
+  },
+  {
     plugins: {
       'unused-imports': unusedImports,
     },

@@ -23,5 +23,5 @@
       "@/*": ["./resources/ts/*"]
     }
   },
-  "include": ["resources/ts/**/*.ts", "resources/ts/**/*.vue", "auto-imports.d.ts", "components.d.ts"],
+  "include": ["resources/ts/**/*.ts", "resources/ts/**/*.vue", "auto-imports.d.ts", "components.d.ts"]
 }

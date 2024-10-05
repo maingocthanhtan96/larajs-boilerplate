@@ -32,11 +32,11 @@ const onResponseError = async (error: AxiosError<ResponseErrors>): Promise<Axios
   const data = response?.data;
   if (data) {
     switch (response.status) {
-      case HttpStatus.HTTP_UNAUTHORIZED: {
+      case 401: {
         router.replace({ path: '/login' }).then();
         break;
       }
-      case HttpStatus.HTTP_UNPROCESSABLE_ENTITY: {
+      case 422: {
         const appStore = useAppStore();
         if (data?.errors) {
           appStore.setErrors(data.errors);
