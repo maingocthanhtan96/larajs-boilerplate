@@ -31,9 +31,7 @@ export default [
     },
   },
   {
-    plugins: {
-      imports: importPlugin,
-    },
+    plugins: { import: importPlugin },
   },
   {
     rules: {
