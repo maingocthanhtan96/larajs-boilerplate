@@ -17,7 +17,7 @@ git clone https://github.com/maingocthanhtan96/larajs-boilerplate.git
 
 - Backend:
     - ✅ PHP 8.3
-    - ✅ Laravel 11
+    - ✅ Laravel 12
     - ✅ Laravel Pint (Code formatting)
     - ✅ Pest PHP (Testing)
     - ✅ Larastan (PHP static analysis)
